@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>689</width>
+    <height>584</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>111</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>标准</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>项目符号(●)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>项目符号(◦)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>项目符号(◼)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>项目符号(1,2,3)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>项目符号(a,b,c)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>项目符号(A,B,C)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>项目符号(i,ii,iii)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>项目符号(I,II,III)</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QFontComboBox" name="fontComboBox">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>0</y>
+      <width>279</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="sizeComBox">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>0</y>
+      <width>181</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QMdiArea" name="mdiArea">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>20</y>
+      <width>691</width>
+      <height>491</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>689</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件(&amp;F)</string>
+    </property>
+    <addaction name="newfile_Action"/>
+    <addaction name="openfile_Action"/>
+    <addaction name="savefile_Action"/>
+    <addaction name="saveotherfile_Action"/>
+    <addaction name="print_Action"/>
+    <addaction name="printandvisit_Action"/>
+    <addaction name="exit_Action"/>
+   </widget>
+   <widget class="QMenu" name="menu_E">
+    <property name="title">
+     <string>编辑(&amp;E)</string>
+    </property>
+    <addaction name="back_Action"/>
+    <addaction name="redo_Action"/>
+    <addaction name="cut_Action"/>
+    <addaction name="copy_Action"/>
+    <addaction name="paste_Action"/>
+   </widget>
+   <widget class="QMenu" name="menu_O">
+    <property name="title">
+     <string>格式(&amp;O)</string>
+    </property>
+    <widget class="QMenu" name="menu_D">
+     <property name="title">
+      <string>字体(D)</string>
+     </property>
+     <addaction name="bold_Action"/>
+     <addaction name="italy_Action"/>
+     <addaction name="underline_Action"/>
+    </widget>
+    <widget class="QMenu" name="menu_2">
+     <property name="title">
+      <string>段落</string>
+     </property>
+     <addaction name="LeftAlign_Action"/>
+     <addaction name="centerAlign_Action"/>
+     <addaction name="rightAlign_Action"/>
+     <addaction name="justiceAlign_Action"/>
+    </widget>
+    <addaction name="menu_D"/>
+    <addaction name="menu_2"/>
+    <addaction name="color_Action"/>
+   </widget>
+   <widget class="QMenu" name="menu_W">
+    <property name="title">
+     <string>窗体(&amp;W)</string>
+    </property>
+    <addaction name="close_Action"/>
+    <addaction name="closeAll_Action"/>
+    <addaction name="title_Action"/>
+    <addaction name="casecde_Action_2"/>
+    <addaction name="next_Action"/>
+    <addaction name="previous_Action"/>
+   </widget>
+   <widget class="QMenu" name="menu_H">
+    <property name="title">
+     <string>帮助(&amp;H)</string>
+    </property>
+    <addaction name="about_Action"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_E"/>
+   <addaction name="menu_O"/>
+   <addaction name="menu_W"/>
+   <addaction name="menu_H"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="newfile_Action"/>
+   <addaction name="openfile_Action"/>
+   <addaction name="savefile_Action"/>
+   <addaction name="separator"/>
+   <addaction name="back_Action"/>
+   <addaction name="redo_Action"/>
+   <addaction name="copy_Action"/>
+   <addaction name="separator"/>
+   <addaction name="color_Action"/>
+   <addaction name="bold_Action"/>
+   <addaction name="italy_Action"/>
+   <addaction name="underline_Action"/>
+   <addaction name="separator"/>
+   <addaction name="LeftAlign_Action"/>
+   <addaction name="centerAlign_Action"/>
+   <addaction name="rightAlign_Action"/>
+   <addaction name="justiceAlign_Action"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="newfile_Action">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/images/new.png</normaloff>:/images/new.png</iconset>
+   </property>
+   <property name="text">
+    <string>新建(N)</string>
+   </property>
+   <property name="statusTip">
+    <string>新建一个文件</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="openfile_Action">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/images/fileopen.png</normaloff>:/images/fileopen.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开(O)</string>
+   </property>
+   <property name="statusTip">
+    <string>打开一个文件</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="savefile_Action">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/images/save.png</normaloff>:/images/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存(S)</string>
+   </property>
+   <property name="statusTip">
+    <string>保存当前文件</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="saveotherfile_Action">
+   <property name="text">
+    <string>另存为(A)</string>
+   </property>
+   <property name="statusTip">
+    <string>另存为</string>
+   </property>
+  </action>
+  <action name="print_Action">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/images/print.png</normaloff>:/images/print.png</iconset>
+   </property>
+   <property name="text">
+    <string>打印(P)</string>
+   </property>
+   <property name="statusTip">
+    <string>打印</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="printandvisit_Action">
+   <property name="text">
+    <string>打印预览</string>
+   </property>
+   <property name="statusTip">
+    <string>打印预览</string>
+   </property>
+  </action>
+  <action name="exit_Action">
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="statusTip">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="back_Action">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/images/undo.png</normaloff>:/images/undo.png</iconset>
+   </property>
+   <property name="text">
+    <string>撤销(U)</string>
+   </property>
+   <property name="statusTip">
+    <string>撤销</string>
+   </property>
+   <property name="whatsThis">
+    <string/>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+U</string>
+   </property>
+  </action>
+  <action name="redo_Action">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/images/redo.png</normaloff>:/images/redo.png</iconset>
+   </property>
+   <property name="text">
+    <string>重做(R)</string>
+   </property>
+   <property name="statusTip">
+    <string>重做</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="cut_Action">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/images/cut.png</normaloff>:/images/cut.png</iconset>
+   </property>
+   <property name="text">
+    <string>剪切(T)</string>
+   </property>
+   <property name="statusTip">
+    <string>剪切</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+T</string>
+   </property>
+  </action>
+  <action name="copy_Action">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/images/copy.png</normaloff>:/images/copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>复制(C)</string>
+   </property>
+   <property name="statusTip">
+    <string>复制</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="paste_Action">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/images/paste.png</normaloff>:/images/paste.png</iconset>
+   </property>
+   <property name="text">
+    <string>粘贴(P)</string>
+   </property>
+   <property name="statusTip">
+    <string>粘贴</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="bold_Action">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/images/bold.png</normaloff>:/images/bold.png</iconset>
+   </property>
+   <property name="text">
+    <string>加粗(B)</string>
+   </property>
+   <property name="statusTip">
+    <string>加粗</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+B</string>
+   </property>
+  </action>
+  <action name="italy_Action">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/images/italic.png</normaloff>:/images/italic.png</iconset>
+   </property>
+   <property name="text">
+    <string>倾斜(I)</string>
+   </property>
+   <property name="statusTip">
+    <string>倾斜</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+  <action name="underline_Action">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/images/under.png</normaloff>:/images/under.png</iconset>
+   </property>
+   <property name="text">
+    <string>下划线(U)</string>
+   </property>
+   <property name="statusTip">
+    <string>下划线</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+U</string>
+   </property>
+  </action>
+  <action name="LeftAlign_Action">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/images/left.png</normaloff>:/images/left.png</iconset>
+   </property>
+   <property name="text">
+    <string>左对齐(L)</string>
+   </property>
+   <property name="statusTip">
+    <string>左对齐</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="centerAlign_Action">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/images/center.png</normaloff>:/images/center.png</iconset>
+   </property>
+   <property name="text">
+    <string>居中(C)</string>
+   </property>
+   <property name="statusTip">
+    <string>居中</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="rightAlign_Action">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/images/right.png</normaloff>:/images/right.png</iconset>
+   </property>
+   <property name="text">
+    <string>右对齐(R)</string>
+   </property>
+   <property name="statusTip">
+    <string>右对齐</string>
+   </property>
+  </action>
+  <action name="close_Action">
+   <property name="text">
+    <string>关闭(O)</string>
+   </property>
+   <property name="statusTip">
+    <string>关闭当前窗口</string>
+   </property>
+  </action>
+  <action name="closeAll_Action">
+   <property name="text">
+    <string>关闭所有(A)</string>
+   </property>
+   <property name="statusTip">
+    <string>关闭所有窗口</string>
+   </property>
+  </action>
+  <action name="title_Action">
+   <property name="text">
+    <string>平铺(T)</string>
+   </property>
+   <property name="statusTip">
+    <string>平铺</string>
+   </property>
+  </action>
+  <action name="casecde_Action_2">
+   <property name="text">
+    <string>层叠(C)</string>
+   </property>
+   <property name="statusTip">
+    <string>层叠</string>
+   </property>
+  </action>
+  <action name="next_Action">
+   <property name="text">
+    <string>下一个(X)</string>
+   </property>
+   <property name="statusTip">
+    <string>下一个窗口</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Tab</string>
+   </property>
+  </action>
+  <action name="previous_Action">
+   <property name="text">
+    <string>前一个(V)</string>
+   </property>
+   <property name="statusTip">
+    <string>前一个窗口</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Tab</string>
+   </property>
+  </action>
+  <action name="about_Action">
+   <property name="text">
+    <string>关于(A)</string>
+   </property>
+   <property name="statusTip">
+    <string>关于</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="justiceAlign_Action">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/images/justify.png</normaloff>:/images/justify.png</iconset>
+   </property>
+   <property name="text">
+    <string>两端对齐(J)</string>
+   </property>
+   <property name="statusTip">
+    <string>两端对齐</string>
+   </property>
+  </action>
+  <action name="color_Action">
+   <property name="icon">
+    <iconset resource="image.qrc">
+     <normaloff>:/images/color.ico</normaloff>:/images/color.ico</iconset>
+   </property>
+   <property name="text">
+    <string>颜色(C)</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="image.qrc"/>
+ </resources>
+ <connections/>
+</ui>
